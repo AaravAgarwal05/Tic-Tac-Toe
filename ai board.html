@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Assets/Images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Assets/Images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Assets/Images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Assets/Images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="Assets/Images/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="Assets/Images/android-chrome-512x512.png"
+    />
+    <link rel="manifest" href="Assets/Images/site.webmanifest" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="back_button" onclick="location.href='player.html'">
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 1024 1024"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+        >
+          <path
+            d="m222.927 580.115 301.354 328.512c24.354 28.708 20.825 71.724-7.883 96.078s-71.724 20.825-96.078-7.883L19.576 559.963a67.9 67.9 0 0 1-13.784-20.022 68 68 0 0 1-5.977-29.488l.001-.063a68.34 68.34 0 0 1 7.265-29.134 68 68 0 0 1 1.384-2.6 67.6 67.6 0 0 1 10.102-13.687L429.966 21.113c25.592-27.611 68.721-29.247 96.331-3.656s29.247 68.721 3.656 96.331L224.088 443.784h730.46c37.647 0 68.166 30.519 68.166 68.166s-30.519 68.166-68.166 68.166z"
+          />
+        </svg>
+      </div>
+      <div class="left_nav">TIC TAC TOE</div>
+      <div class="right_nav">
+        <label class="theme-switch" for="custom-checkbox">
+          <input
+            checked
+            type="checkbox"
+            id="custom-checkbox"
+            class="theme-switch__checkbox"
+          />
+          <div class="theme-switch__container">
+            <div class="theme-switch__clouds"></div>
+            <div class="theme-switch__stars-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 144 55"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M135.831 3.007c-.776.843-1.72 1.292-2.831 1.347 1.111.055 2.055.505 2.831 1.357.776.844 1.165 1.852 1.165 3.016 0-.77.176-1.476.529-2.136a4.336 4.336 0 0 1 1.455-1.586 3.982 3.982 0 0 1 2.02-.65c-1.12-.065-2.064-.505-2.84-1.348-.776-.844-1.164-1.843-1.164-3.007 0 1.164-.389 2.163-1.165 3.007ZM31 23.355c1.111-.056 2.055-.505 2.831-1.348.776-.844 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.979 3.979 0 0 0-2.02.65 4.337 4.337 0 0 0-1.455 1.586 4.444 4.444 0 0 0-.53 2.136c0-1.164-.387-2.172-1.164-3.016-.776-.852-1.72-1.301-2.831-1.356Zm-31 13c1.111-.055 2.055-.505 2.831-1.348.776-.843 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.98 3.98 0 0 0-2.02.65 4.337 4.337 0 0 0-1.455 1.586 4.444 4.444 0 0 0-.53 2.136c0-1.164-.388-2.172-1.164-3.016-.776-.852-1.72-1.301-2.831-1.356Zm56.831-12.348c-.776.843-1.72 1.292-2.831 1.348 1.111.055 2.055.504 2.831 1.356.776.844 1.165 1.852 1.165 3.016 0-.77.176-1.476.529-2.136a4.337 4.337 0 0 1 1.455-1.586 3.979 3.979 0 0 1 2.02-.65c-1.12-.065-2.064-.505-2.84-1.348-.776-.844-1.164-1.843-1.164-3.007 0 1.164-.389 2.163-1.165 3.007ZM81 25.355c1.111-.056 2.055-.505 2.831-1.348.776-.844 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.979 3.979 0 0 0-2.02.65 4.337 4.337 0 0 0-1.455 1.586 4.444 4.444 0 0 0-.53 2.136c0-1.164-.388-2.172-1.164-3.016-.776-.852-1.72-1.301-2.831-1.356Zm55 11c1.111-.055 2.055-.505 2.831-1.348.776-.843 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.982 3.982 0 0 0-2.02.65 4.336 4.336 0 0 0-1.455 1.586 4.442 4.442 0 0 0-.529 2.136c0-1.164-.389-2.172-1.165-3.016-.776-.852-1.72-1.301-2.831-1.356Zm-34.169 12.652c-.776.843-1.72 1.293-2.831 1.348 1.111.055 2.055.504 2.831 1.356.776.844 1.165 1.852 1.165 3.016 0-.77.176-1.476.529-2.136a4.336 4.336 0 0 1 1.455-1.586 3.982 3.982 0 0 1 2.02-.65c-1.12-.065-2.064-.505-2.84-1.348-.776-.843-1.164-1.843-1.164-3.007 0 1.164-.389 2.163-1.165 3.007Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div class="theme-switch__circle-container">
+              <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </nav>
+    <main>
+      <div class="name">
+        <h1>Enter Your Name</h1>
+        <input type="text" id="player" placeholder="Player" />
+        <button onclick="saveName()">Save</button>
+        <h1>You are X and Computer is O</h1>
+      </div>
+      <div class="game">
+        <div class="board">
+          <button onclick="PlayerMove('1')" class="square" id="1"></button>
+          <button onclick="PlayerMove('2')" class="square" id="2"></button>
+          <button onclick="PlayerMove('3')" class="square" id="3"></button>
+          <button onclick="PlayerMove('4')" class="square" id="4"></button>
+          <button onclick="PlayerMove('5')" class="square" id="5"></button>
+          <button onclick="PlayerMove('6')" class="square" id="6"></button>
+          <button onclick="PlayerMove('7')" class="square" id="7"></button>
+          <button onclick="PlayerMove('8')" class="square" id="8"></button>
+          <button onclick="PlayerMove('9')" class="square" id="9"></button>
+        </div>
+        <div class="game-info">
+          <div id="status"></div>
+          <button onclick="Reset()">
+            PLAY AGAIN
+            <svg
+              width="80"
+              height="80"
+              viewBox="0 0 1920 1920"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+            >
+              <path
+                d="M960 0v213.333c411.627 0 746.667 334.934 746.667 746.667S1371.627 1706.667 960 1706.667 213.333 1371.733 213.333 960c0-197.013 78.4-382.507 213.334-520.747v254.08H640V106.667H53.333V320h191.04C88.64 494.08 0 720.96 0 960c0 529.28 430.613 960 960 960s960-430.72 960-960S1489.387 0 960 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

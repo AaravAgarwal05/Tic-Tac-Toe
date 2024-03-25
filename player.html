@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Assets/Images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Assets/Images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Assets/Images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Assets/Images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="Assets/Images/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="Assets/Images/android-chrome-512x512.png"
+    />
+    <link rel="manifest" href="Assets/Images/site.webmanifest" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="back_button" onclick="location.href='index.html'">
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 1024 1024"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+        >
+          <path
+            d="m222.927 580.115 301.354 328.512c24.354 28.708 20.825 71.724-7.883 96.078s-71.724 20.825-96.078-7.883L19.576 559.963a67.9 67.9 0 0 1-13.784-20.022 68 68 0 0 1-5.977-29.488l.001-.063a68.34 68.34 0 0 1 7.265-29.134 68 68 0 0 1 1.384-2.6 67.6 67.6 0 0 1 10.102-13.687L429.966 21.113c25.592-27.611 68.721-29.247 96.331-3.656s29.247 68.721 3.656 96.331L224.088 443.784h730.46c37.647 0 68.166 30.519 68.166 68.166s-30.519 68.166-68.166 68.166z"
+          />
+        </svg>
+      </div>
+      <div class="left_nav">TIC TAC TOE</div>
+      <div class="right_nav">
+        <label class="theme-switch" for="custom-checkbox">
+          <input
+            checked
+            type="checkbox"
+            id="custom-checkbox"
+            class="theme-switch__checkbox"
+          />
+          <div class="theme-switch__container">
+            <div class="theme-switch__clouds"></div>
+            <div class="theme-switch__stars-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 144 55"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M135.831 3.007c-.776.843-1.72 1.292-2.831 1.347 1.111.055 2.055.505 2.831 1.357.776.844 1.165 1.852 1.165 3.016 0-.77.176-1.476.529-2.136a4.336 4.336 0 0 1 1.455-1.586 3.982 3.982 0 0 1 2.02-.65c-1.12-.065-2.064-.505-2.84-1.348-.776-.844-1.164-1.843-1.164-3.007 0 1.164-.389 2.163-1.165 3.007ZM31 23.355c1.111-.056 2.055-.505 2.831-1.348.776-.844 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.979 3.979 0 0 0-2.02.65 4.337 4.337 0 0 0-1.455 1.586 4.444 4.444 0 0 0-.53 2.136c0-1.164-.387-2.172-1.164-3.016-.776-.852-1.72-1.301-2.831-1.356Zm-31 13c1.111-.055 2.055-.505 2.831-1.348.776-.843 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.98 3.98 0 0 0-2.02.65 4.337 4.337 0 0 0-1.455 1.586 4.444 4.444 0 0 0-.53 2.136c0-1.164-.388-2.172-1.164-3.016-.776-.852-1.72-1.301-2.831-1.356Zm56.831-12.348c-.776.843-1.72 1.292-2.831 1.348 1.111.055 2.055.504 2.831 1.356.776.844 1.165 1.852 1.165 3.016 0-.77.176-1.476.529-2.136a4.337 4.337 0 0 1 1.455-1.586 3.979 3.979 0 0 1 2.02-.65c-1.12-.065-2.064-.505-2.84-1.348-.776-.844-1.164-1.843-1.164-3.007 0 1.164-.389 2.163-1.165 3.007ZM81 25.355c1.111-.056 2.055-.505 2.831-1.348.776-.844 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.979 3.979 0 0 0-2.02.65 4.337 4.337 0 0 0-1.455 1.586 4.444 4.444 0 0 0-.53 2.136c0-1.164-.388-2.172-1.164-3.016-.776-.852-1.72-1.301-2.831-1.356Zm55 11c1.111-.055 2.055-.505 2.831-1.348.776-.843 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.982 3.982 0 0 0-2.02.65 4.336 4.336 0 0 0-1.455 1.586 4.442 4.442 0 0 0-.529 2.136c0-1.164-.389-2.172-1.165-3.016-.776-.852-1.72-1.301-2.831-1.356Zm-34.169 12.652c-.776.843-1.72 1.293-2.831 1.348 1.111.055 2.055.504 2.831 1.356.776.844 1.165 1.852 1.165 3.016 0-.77.176-1.476.529-2.136a4.336 4.336 0 0 1 1.455-1.586 3.982 3.982 0 0 1 2.02-.65c-1.12-.065-2.064-.505-2.84-1.348-.776-.843-1.164-1.843-1.164-3.007 0 1.164-.389 2.163-1.165 3.007Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div class="theme-switch__circle-container">
+              <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </nav>
+    <main>
+      <div class="opponent_button">
+        <button onclick="location.href='Ai Board.html'">
+          V/s AI
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            data-name="Layer 1"
+            fill="currentColor"
+          >
+            <path
+              d="M9 15a1 1 0 1 0 1 1 1 1 0 0 0-1-1m-7-1a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1m20 0a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1m-5-7h-4V5.72A2 2 0 0 0 14 4a2 2 0 0 0-4 0 2 2 0 0 0 1 1.72V7H7a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3m-3.28 2-.5 2h-2.44l-.5-2ZM18 19a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1.22L9 12.24a1 1 0 0 0 1 .76h4a1 1 0 0 0 1-.76L15.78 9H17a1 1 0 0 1 1 1Zm-3-4a1 1 0 1 0 1 1 1 1 0 0 0-1-1"
+            />
+          </svg>
+          <svg
+            width="80"
+            height="80"
+            viewBox="-4 -3 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMinYMin"
+            class="jam jam-play"
+            fill="currentColor"
+          >
+            <path
+              d="M13.82 9.523a.976.976 0 0 0-.324-1.363L3.574 2.128a1.03 1.03 0 0 0-.535-.149c-.56 0-1.013.443-1.013.99V15.03c0 .185.053.366.153.523.296.464.92.606 1.395.317l9.922-6.031c.131-.08.243-.189.325-.317zm.746 1.997-9.921 6.031c-1.425.867-3.3.44-4.186-.951A2.9 2.9 0 0 1 0 15.03V2.97C0 1.329 1.36 0 3.04 0c.567 0 1.123.155 1.605.448l9.921 6.032c1.425.866 1.862 2.696.975 4.088-.246.386-.58.712-.975.952"
+            />
+          </svg>
+        </button>
+        <button onclick="location.href='Player Board.html'">
+          P1 V/s P2
+          <svg
+            width="80"
+            height="80"
+            viewBox="-4 -3 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMinYMin"
+            class="jam jam-play"
+            fill="currentColor"
+          >
+            <path
+              d="M13.82 9.523a.976.976 0 0 0-.324-1.363L3.574 2.128a1.03 1.03 0 0 0-.535-.149c-.56 0-1.013.443-1.013.99V15.03c0 .185.053.366.153.523.296.464.92.606 1.395.317l9.922-6.031c.131-.08.243-.189.325-.317zm.746 1.997-9.921 6.031c-1.425.867-3.3.44-4.186-.951A2.9 2.9 0 0 1 0 15.03V2.97C0 1.329 1.36 0 3.04 0c.567 0 1.123.155 1.605.448l9.921 6.032c1.425.866 1.862 2.696.975 4.088-.246.386-.58.712-.975.952"
+            />
+          </svg>
+        </button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

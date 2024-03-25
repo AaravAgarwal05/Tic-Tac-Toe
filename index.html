@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Assets/Images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Assets/Images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Assets/Images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Assets/Images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="Assets/Images/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="Assets/Images/android-chrome-512x512.png"
+    />
+    <link rel="manifest" href="Assets/Images/site.webmanifest" />
+  </head>
+  <body>
+    <main>
+      <div class="play_button">
+        <h1>TIC TAC TOE</h1>
+        <button onclick="location.href='Player.html'">
+          PLAY
+          <svg
+            width="80"
+            height="80"
+            viewBox="-4 -3 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMinYMin"
+            class="jam jam-play"
+            fill="currentColor"
+          >
+            <path
+              d="M13.82 9.523a.976.976 0 0 0-.324-1.363L3.574 2.128a1.03 1.03 0 0 0-.535-.149c-.56 0-1.013.443-1.013.99V15.03c0 .185.053.366.153.523.296.464.92.606 1.395.317l9.922-6.031c.131-.08.243-.189.325-.317zm.746 1.997-9.921 6.031c-1.425.867-3.3.44-4.186-.951A2.9 2.9 0 0 1 0 15.03V2.97C0 1.329 1.36 0 3.04 0c.567 0 1.123.155 1.605.448l9.921 6.032c1.425.866 1.862 2.696.975 4.088-.246.386-.58.712-.975.952"
+            />
+          </svg>
+        </button>
+        <label class="theme-switch" for="custom-checkbox">
+          <input
+            checked
+            type="checkbox"
+            id="custom-checkbox"
+            class="theme-switch__checkbox"
+          />
+          <div class="theme-switch__container">
+            <div class="theme-switch__clouds"></div>
+            <div class="theme-switch__stars-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 144 55"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M135.831 3.007c-.776.843-1.72 1.292-2.831 1.347 1.111.055 2.055.505 2.831 1.357.776.844 1.165 1.852 1.165 3.016 0-.77.176-1.476.529-2.136a4.336 4.336 0 0 1 1.455-1.586 3.982 3.982 0 0 1 2.02-.65c-1.12-.065-2.064-.505-2.84-1.348-.776-.844-1.164-1.843-1.164-3.007 0 1.164-.389 2.163-1.165 3.007ZM31 23.355c1.111-.056 2.055-.505 2.831-1.348.776-.844 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.979 3.979 0 0 0-2.02.65 4.337 4.337 0 0 0-1.455 1.586 4.444 4.444 0 0 0-.53 2.136c0-1.164-.387-2.172-1.164-3.016-.776-.852-1.72-1.301-2.831-1.356Zm-31 13c1.111-.055 2.055-.505 2.831-1.348.776-.843 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.98 3.98 0 0 0-2.02.65 4.337 4.337 0 0 0-1.455 1.586 4.444 4.444 0 0 0-.53 2.136c0-1.164-.388-2.172-1.164-3.016-.776-.852-1.72-1.301-2.831-1.356Zm56.831-12.348c-.776.843-1.72 1.292-2.831 1.348 1.111.055 2.055.504 2.831 1.356.776.844 1.165 1.852 1.165 3.016 0-.77.176-1.476.529-2.136a4.337 4.337 0 0 1 1.455-1.586 3.979 3.979 0 0 1 2.02-.65c-1.12-.065-2.064-.505-2.84-1.348-.776-.844-1.164-1.843-1.164-3.007 0 1.164-.389 2.163-1.165 3.007ZM81 25.355c1.111-.056 2.055-.505 2.831-1.348.776-.844 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.979 3.979 0 0 0-2.02.65 4.337 4.337 0 0 0-1.455 1.586 4.444 4.444 0 0 0-.53 2.136c0-1.164-.388-2.172-1.164-3.016-.776-.852-1.72-1.301-2.831-1.356Zm55 11c1.111-.055 2.055-.505 2.831-1.348.776-.843 1.165-1.843 1.165-3.007 0 1.164.388 2.163 1.164 3.007.776.843 1.72 1.283 2.84 1.348a3.982 3.982 0 0 0-2.02.65 4.336 4.336 0 0 0-1.455 1.586 4.442 4.442 0 0 0-.529 2.136c0-1.164-.389-2.172-1.165-3.016-.776-.852-1.72-1.301-2.831-1.356Zm-34.169 12.652c-.776.843-1.72 1.293-2.831 1.348 1.111.055 2.055.504 2.831 1.356.776.844 1.165 1.852 1.165 3.016 0-.77.176-1.476.529-2.136a4.336 4.336 0 0 1 1.455-1.586 3.982 3.982 0 0 1 2.02-.65c-1.12-.065-2.064-.505-2.84-1.348-.776-.843-1.164-1.843-1.164-3.007 0 1.164-.389 2.163-1.165 3.007Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div class="theme-switch__circle-container">
+              <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
