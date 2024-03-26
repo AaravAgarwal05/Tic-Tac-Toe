@@ -776,7 +776,7 @@ h1 {
   gap: 10px;
   background-color: var(--text-color);
   border-radius: 10px;
-  box-shadow: 25px 25px 25px #adb9bf, -25px -25px 25px #fff;
+  box-shadow: 25px 25px 25px #adb9bf;
 }
 
 .square {
