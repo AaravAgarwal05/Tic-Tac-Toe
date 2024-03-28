@@ -6,7 +6,7 @@
     height: auto;
   }
 
-  svg {
+  img {
     width: 80px;
     height: 80px;
   }
@@ -97,7 +97,7 @@
     gap: 32px;
   }
 
-  svg {
+  img {
     width: 40px;
     height: 40px;
   }
@@ -188,7 +188,7 @@
     gap: 32px;
   }
 
-  svg {
+  img {
     width: 40px;
     height: 40px;
   }
@@ -280,7 +280,7 @@
     gap: 32px;
   }
 
-  svg {
+  img {
     width: 40px;
     height: 40px;
   }
