@@ -241,6 +241,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function updateColors(isChecked) {
+  if (isChecked) {
+    var images = document.getElementsByTagName("img");
+    for (var i = 0; i < images.length; i++) {
+      images[i].style.filter = "invert(1)";
+    }
+  }
+  else {
+    var images = document.getElementsByTagName("img");
+    for (var i = 0; i < images.length; i++) {
+      images[i].style.filter = "invert(0)";
+    }
+  }
   document.documentElement.style.setProperty(
     "--bg-color",
     isChecked ? "#0b1623" : "#e7f6ff"
